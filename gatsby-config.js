@@ -20,11 +20,19 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-mdx`,
-      //   options: {
-      //     gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
-      //   },
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
     },
   ],
 };
