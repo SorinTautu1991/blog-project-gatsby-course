@@ -1,0 +1,75 @@
+import { Link } from 'gatsby';
+import { FiInfo } from 'react-icons/fi';
+import { Counter, LikeButton } from '../components/Complete';
+
+<section className='mdx-page'>
+
+## my first mdx file
+
+**I'm baby jean shorts chia offal next level normcore salvia migas food truck polaroid typewriter locavore.**
+Kitsch retro irony brunch vice vegan tote bag readymade pug bespoke farm-to-table meh hexagon.
+Palo santo la croix cloud bread tofu cardigan, snackwave organic.
+Kogi try-hard you probably haven't heard of them yr umami everyday carry.
+Portland pork belly godard squid. Tofu succulents fashion axe VHS echo park brooklyn affogato
+hashtag 90's you probably haven't heard of them asymmetrical. _Thundercats pinterest iceland
+taiyaki whatever affogato +1._
+
+<div className="code">
+
+```js
+const firstName = 'John';
+const lastName = 'Smith';
+```
+
+</div>
+
+<div className='nice-text'>
+
+<h3>nice text</h3>
+
+<FiInfo className="nice-text-icon" />
+
+Cronut gastropub neutra, synth waistcoat brooklyn locavore. Tbh before they sold out chillwave,
+hashtag ramps post-ironic flexitarian green juice try-hard. Organic wayfarers affogato slow-carb.
+Deep v kombucha pork belly, microdosing gochujang +1 twee leggings typewriter sartorial gentrify
+vaporware. Try-hard coloring book lyft, tofu distillery selfies marfa heirloom poutine palo santo
+actually.Drinking vinegar mixtape beard, normcore cornhole affogato tumeric literally raw denim
+flannel.
+
+</div>
+
+<h2>React components</h2>
+
+<Counter />
+
+```jsx
+import React from 'react';
+import styled from 'styled-components';
+import { AiOutlineLike } from 'react-icons/ai';
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0);
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  );
+};
+```
+
+<LikeButton />
+
+<Link className="btn center-btn" to="/posts">
+  All posts page!
+</Link>
+
+</section>
