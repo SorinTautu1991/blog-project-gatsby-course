@@ -1,6 +1,7 @@
-import React from 'react'
-import video from '../../assets/connect.mp4'
-import styled from 'styled-components'
+import React from 'react';
+import video from '../../assets/connect.mp4';
+import styled from 'styled-components';
+
 export const RegVideo = () => {
   return (
     <RegVideoWrapper>
@@ -8,8 +9,8 @@ export const RegVideo = () => {
         <source src={video} type="video/mp4" />
       </video>
     </RegVideoWrapper>
-  )
-}
+  );
+};
 
 export const Video = ({ src, title, ...props }) => {
   return (
@@ -26,8 +27,8 @@ export const Video = ({ src, title, ...props }) => {
         />
       </div>
     </IframeVideoWrapper>
-  )
-}
+  );
+};
 
 const RegVideoWrapper = styled.div`
   width: 90vw;
@@ -43,7 +44,7 @@ const RegVideoWrapper = styled.div`
     height: 100%;
     object-fit: cover;
   }
-`
+`;
 const IframeVideoWrapper = styled.div`
   width: 90vw;
   max-width: 700px;
@@ -64,9 +65,9 @@ const IframeVideoWrapper = styled.div`
     top: 0;
     width: 100%;
   }
-`
+`;
 
 Video.defaultProps = {
   src: 'https://www.youtube.com/embed/-8ORfgUa8ow',
   title: 'the best html css tutorial ever !',
-}
+};
